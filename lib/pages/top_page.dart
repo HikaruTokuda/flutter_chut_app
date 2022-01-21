@@ -38,7 +38,7 @@ class _TopPageState extends State<TopPage> {
         itemBuilder: (context, index) {           // 行の作成
           return InkWell(                         // Inkwellはchildプロパティ内のウィジェットをクリック可能にする
             onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => TalkRoom()));   // 画面遷移
+              Navigator.push(context, MaterialPageRoute(builder: (context) => TalkRoom(userList[index].name!)));   // 画面遷移
             },
             child: Container(
               height: 70,

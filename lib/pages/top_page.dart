@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_chut_app/model/user.dart';
+import 'package:flutter_chut_app/pages/talk_room.dart';
 
 class TopPage extends StatefulWidget {
   const TopPage({Key? key}) : super(key: key);
@@ -37,7 +38,7 @@ class _TopPageState extends State<TopPage> {
         itemBuilder: (context, index) {           // 行の作成
           return InkWell(                         // Inkwellはchildプロパティ内のウィジェットをクリック可能にする
             onTap: () {
-              print('押されたよ');
+              Navigator.push(context, MaterialPageRoute(builder: (context) => TalkRoom()));   // 画面遷移
             },
             child: Container(
               height: 70,

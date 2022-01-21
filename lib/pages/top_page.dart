@@ -14,6 +14,7 @@ class _TopPageState extends State<TopPage> {
       appBar: AppBar(
         title: Text('チャットアプリ'),
       ),
+      body: Center(child: Text('Top page')),
     );
   }
 }
